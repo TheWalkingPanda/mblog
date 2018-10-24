@@ -3,11 +3,10 @@ apply plugin: "org.springframework.boot"
 
 dependencies {
     compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-freemarker"
     compile "org.springframework.boot:spring-boot-starter-aop"
     compile "org.springframework.boot:spring-boot-starter-log4j2"
-    compile ("com.alibaba:dubbo:2.6.4") {
-        exclude module: "spring"
-    }
+    compile "com.alibaba:dubbo:2.6.4"
 
 //    bean copy tool
     compile "ma.glasnost.orika:orika-core:1.5.2"
