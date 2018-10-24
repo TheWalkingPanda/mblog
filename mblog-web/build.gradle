@@ -1,0 +1,24 @@
+apply plugin: 'io.spring.dependency-management'
+apply plugin: "org.springframework.boot"
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-starter-web"
+    compile "org.springframework.boot:spring-boot-starter-aop"
+    compile "org.springframework.boot:spring-boot-starter-log4j2"
+    compile ("com.alibaba:dubbo:2.6.4") {
+        exclude module: "spring"
+    }
+
+//    bean copy tool
+    compile "ma.glasnost.orika:orika-core:1.5.2"
+
+//    log4j2 异步写日志
+    compile "com.lmax:disruptor:3.3.6"
+
+    compile "org.apache.commons:commons-lang3:3.8.1"
+    compile "org.apache.commons:commons-collections4:4.2"
+    compile "com.google.guava:guava:27.0-jre"
+    compile "com.alibaba:fastjson:1.2.51"
+
+    testCompile "org.springframework.boot:spring-boot-starter-test"
+}

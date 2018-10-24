@@ -1,0 +1,6 @@
+rootProject.name = 'mblog'
+include 'mblog-api'
+include 'mblog-provider'
+include 'mblog-web'
+include 'mblog-mapper'
+
